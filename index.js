@@ -1,10 +1,9 @@
 const togglePlayer = () => {
-  if (player == 1) player = 2;
-  else player = 1;
+  player === 1 ? player = 2 : player = 1;
   document.getElementById("player").innerText = player;
 };
 
-var player = 1;
+let player = 1;
 document.getElementById("player").innerText = player;
 
 let currentPlayer = "X";
@@ -21,9 +20,9 @@ function cellClicked(row, col) {
     document
       .getElementById("cell" + row + col)
       .classList.add("filled-" + currentPlayer);
-    checkWin();
     currentPlayer = currentPlayer === "X" ? "O" : "X";
-    togglePlayer();
+    setTimeout(()=>checkWin(),500)
+    
   }
 }
 
@@ -88,11 +87,14 @@ function checkWin() {
     alert("It's a draw!");
     resetGame();
     return;
+  }else {
+    togglePlayer();
   }
 }
 
 function resetGame() {
-    togglePlayer(player)
+  player = 2
+  togglePlayer()
   currentPlayer = "X";
   gameBoard = [
     ["", "", ""],
