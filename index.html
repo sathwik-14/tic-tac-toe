@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div class="d-flex-center">
+    <div class="grid">
+        <div class="cell" id="cell00" onclick="cellClicked(0, 0)"></div>
+        <div class="cell" id="cell01" onclick="cellClicked(0, 1)"></div>
+        <div class="cell" id="cell02" onclick="cellClicked(0, 2)"></div>
+        <div class="cell" id="cell10" onclick="cellClicked(1, 0)"></div>
+        <div class="cell" id="cell11" onclick="cellClicked(1, 1)"></div>
+        <div class="cell" id="cell12" onclick="cellClicked(1, 2)"></div>
+        <div class="cell" id="cell20" onclick="cellClicked(2, 0)"></div>
+        <div class="cell" id="cell21" onclick="cellClicked(2, 1)"></div>
+        <div class="cell" id="cell22" onclick="cellClicked(2, 2)"></div>
+    </div>
+</div>
+<div class="d-flex-center turn" >Player&nbsp;<div id="player"></div>&nbsp;Turn</div>
+    <script src="index.js"></script>
+</body>
+</html>

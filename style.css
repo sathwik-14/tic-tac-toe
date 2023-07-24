@@ -1,0 +1,48 @@
+body {
+    font-family:sans-serif;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-gap: 5px;
+    margin-top: 30px;
+}
+
+.cell {
+    transition: all .2s ease-in-out;
+    width: 150px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #ddd;
+}
+
+.filled-X {
+    color: blue;
+    font-size: 4rem;
+}
+
+.filled-O {
+    color: red;
+    font-size: 4rem;
+}
+
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.turn {
+    font-size: 1.4rem;
+}
